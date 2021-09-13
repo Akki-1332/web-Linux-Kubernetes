@@ -1,4 +1,4 @@
-ip = "13.126.60.21" 
+ip =
 addr = "http://"+ ip +"/cgi-bin/cmd.py?cmd=" 
 function create_pod() {
     var ref = document.getElementById("c_pod");
