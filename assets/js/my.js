@@ -1,3 +1,5 @@
+ip = "13.126.60.21" 
+addr = "http://"+ ip +"/cgi-bin/cmd.py?cmd=" 
 function create_pod() {
     var ref = document.getElementById("c_pod");
     ref.style.display = "block";
@@ -27,7 +29,7 @@ function describe_pod() {
 function get_res(res){
     var k = "kubectl get " + res;
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://13.126.60.21/cgi-bin/cmd.py?cmd=" + k, true);
+    xhr.open("GET", addr + k, true);
     xhr.send();
 
     xhr.onload = function(){
@@ -43,7 +45,7 @@ function create_p(){
 
     // alert(k);
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://13.126.60.21/cgi-bin/cmd.py?cmd=" + k, true);
+    xhr.open("GET", addr + k, true);
     xhr.send();
 
     xhr.onload = function(){
@@ -58,7 +60,7 @@ function delete_res(res){
 
     // alert(k);
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://13.126.60.21/cgi-bin/cmd.py?cmd=" + k, true);
+    xhr.open("GET", addr + k, true);
     xhr.send();
 
     xhr.onload = function(){
@@ -73,7 +75,7 @@ function describe_res(res){
 
     // alert(k);
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://13.126.60.21/cgi-bin/cmd.py?cmd=" + k, true);
+    xhr.open("GET", addr + k, true);
     xhr.send();
 
     xhr.onload = function(){
@@ -89,7 +91,7 @@ function create_res(res){
 
     // alert(k);
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://13.126.60.21/cgi-bin/cmd.py?cmd=" + k, true);
+    xhr.open("GET", addr + k, true);
     xhr.send();
 
     xhr.onload = function(){
@@ -103,7 +105,7 @@ function run_cmd() {
     console.log(i);
     // alert(i);
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://13.126.60.21/cgi-bin/cmd.py?cmd=" + i, true);
+    xhr.open("GET", addr + i, true);
     xhr.send();
 
     xhr.onload = function(){
